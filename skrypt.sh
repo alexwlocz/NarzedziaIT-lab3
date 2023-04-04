@@ -45,3 +45,28 @@ if [ "$1" = "--init" ]; then
     echo 'export PATH=$PATH:'$(pwd) >> ~/.bashrc
 fi
 
+
+#Zadanie z flagą --logs jest zawarte powyżej.
+
+#Tworzenie 100 plików errori.txt.
+
+if [ "$1" = "--error" ] || [ "$1" = "-e" ]; then
+    if [ "$2" = "" ]; then
+        for i in {1..100}; do
+            mkdir error$i
+            echo "Nazwa pliku: error$i.txt" > ./error$i/error$i.txt
+            echo "Nazwa skryptu: skrypt.sh" >> ./error$i/error$i.txt
+            echo "Data utworzenia: $(date)" >> ./error$i/error$i.txt
+        done
+      
+#Tworzenie i plików errori
+
+    elif [ "$2" -gt 0 ] 2>/dev/null; then
+        for ((i=1; i<=$2; i++)); do
+            mkdir error$i
+            echo "Nazwa pliku: error$i.txt" > ./error$i/error$i.txt
+            echo "Nazwa skryptu: skrypt.sh" >> ./error$i/error$i.txt
+            echo "Data utworzenia: $(date)" >> ./error$i/error$i.txt
+        done
+    fi
+fi
