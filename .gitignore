@@ -1,3 +1,7 @@
-# Ignoruj pliki zawierające ciąg znaków lub rozszerzenie "log" 
+#Ignoruj pliki zawierające ciąg znaków lub rozszerzenie "log" 
 *.log
 log?.txt
+
+#Ignoruj pliki zawierające ciąg znaków "error"
+*.error
+error?.txt
