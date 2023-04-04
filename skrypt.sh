@@ -34,6 +34,6 @@ fi
 
 help=$(git --help)
 
-if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+if [ "$1" = "--help" ] || [ "$1" = "-h" ] || [ "$1" = "--pomoc" ] || [ "$1" = "-p" ]; then
     echo $help
 fi
