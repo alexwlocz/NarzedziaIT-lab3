@@ -37,3 +37,11 @@ help=$(git --help)
 if [ "$1" = "--help" ] || [ "$1" = "-h" ] || [ "$1" = "--pomoc" ] || [ "$1" = "-p" ]; then
     echo $help
 fi
+
+#Klonowanie repozytorium do katalogu w którym został uruchomiony, ustawienie ścieżki w zmiennej PATH
+
+if [ "$1" = "--init" ]; then
+    git clone https://github.com/alexwlocz/NarzedziaIT.git
+    echo 'export PATH=$PATH:'$(pwd) >> ~/.bashrc
+fi
+
