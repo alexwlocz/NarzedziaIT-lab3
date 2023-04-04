@@ -28,3 +28,10 @@ elif [ "$1" = "--logs" ] && [ "$2" -gt 0 ] 2>/dev/null; then
     done
 fi  
 
+#Skrypt wyświetlający wszystkie dostępne opcje
+
+help=$(git --help)
+
+if [ "$1" = "--help" ]; then
+    echo $help
+fi
