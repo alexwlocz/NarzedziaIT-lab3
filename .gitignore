@@ -1,0 +1,3 @@
+# Ignoruj pliki zawierające ciąg znaków lub rozszerzenie "log" 
+*.log
+log?.txt
